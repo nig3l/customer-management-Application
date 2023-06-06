@@ -28,4 +28,6 @@ def contact(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(' ', home),
+    path('about/',contact),
 ]
