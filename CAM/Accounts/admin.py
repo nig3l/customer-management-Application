@@ -7,4 +7,7 @@ from .models import *
 admin.site.register(customer)
 admin.site.register(Product)
 admin.site.register(Order)
+admin.site.register(Tag)
+
+
 
