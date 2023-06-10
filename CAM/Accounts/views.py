@@ -7,18 +7,16 @@ from .models import *
 
 def home(request):
     orders = Order.objects.all()
-    # customer = customer.objects.all()
+    customer = Customer.objects.all()
+    context = {'orders':orders,'customer':customer}
 
-    # context = {'orders':orders,'customer':customer}
-
-    return render(request, 'Accounts/dashboard.html')
+    return render(request, 'Accounts/dashboard.html',context)
 
 def products(request):
     products = Product.objects.all()
     return render(request, 'Accounts/products.html',{'products':products})
 
 def customer(request):
-    customer = customer.objects.all()
-    return render(request,'Accounts/customer.html',{'customer':customer})
+    return render(request,'Accounts/customer.html')
 
 
