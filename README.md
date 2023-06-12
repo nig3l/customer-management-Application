@@ -1,2 +1,2 @@
-This is application will be storing customer information 
-Utilising the django-web-framework
+This is application  stores customer data  
+
