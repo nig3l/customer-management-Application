@@ -32,5 +32,9 @@ def customer(request,pk_test):
     context = {'customer':customer,'orders':orders,'order_count':order_count}
     return render(request,'Accounts/customer.html',context)
 
+def createOrder(request):
+
+    return render(request,'A')
+
 
 
