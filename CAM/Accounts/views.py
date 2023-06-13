@@ -34,7 +34,9 @@ def customer(request,pk_test):
 
 def createOrder(request):
 
-    return render(request,'A')
+    context = {}
+        
+    return render(request,'Accounts/order_form.html',context)
 
 
 
