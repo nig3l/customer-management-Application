@@ -23,9 +23,14 @@ def products(request):
     products = Product.objects.all()
     return render(request, 'Accounts/products.html',{'products':products})
 
-def customer(request):
-    # customer = Customer.objects.all()
-    return render(request,'Accounts/customer.html')
+def customer(request,pk_test):
+    customer = Customer.objects.get(id=pk_test)
+
+    orders = customer.order_set.all()
+    order_count = orders.count()
+
+    context = {'customer':customer,'orders':orders,'order_count':order_count}
+    return render(request,'Accounts/customer.html',context)
 
 
 
