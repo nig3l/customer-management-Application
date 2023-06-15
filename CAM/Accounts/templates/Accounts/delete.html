@@ -3,16 +3,30 @@
 {% load static%}
 {% block content%}
 
-<p>Are You Sure You Want To Delete "{{item}}" ?</p>
+<br>
+<div class = "row">
+    <div class = "col-md-6">
+        <div class = "card card-body">
 
-<form method="POST" action="">
-    {% csrf_token %}
-    {{form}}
+            <p>Are You Sure You Want To Delete "{{item}}" ?</p>
 
-    <a href="{% url 'home' %}"> Cancel </a>
+        <form method="POST" action="{% url 'delete_order' item.id%}">
+             {% csrf_token %}
+             {{form}}
 
-    <input type="submit" name="Confirm">
+             <a class = " btn btn-warning" href="{% url 'home' %}"> Cancel </a>
 
-</form>
+              <input class = "btn btn-danger" type="submit" name="Confirm">
+
+        </form>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
 
 {% endblock %}
