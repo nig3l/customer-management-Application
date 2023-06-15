@@ -66,7 +66,7 @@ def deleteOrder(request,pk):
 
     order = Order.objects.get(id=pk)
     context = {'item':order}
-    return render(request,'Accounts/order_form.html',context)
+    return render(request,'Accounts/delete.html',context)
 
 
 
